@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento&display=swap');
+
+body {
+  /* background-color: rgb(105, 1, 1); */
+  background-color: #1D1450;
+}
+
+.blob {
+  position: fixed;
+  background-color: white;
+  height: 300px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: linear-gradient(to right,
+      rgb(255, 255, 255),
+      mediumpurple);
+  animation:
+    transform 50s ease-in-out infinite both alternate, rotate 20s infinite;
+  filter: blur(150px);
+}
+
+.blob:nth-of-type(1) {
+  left: 30%;
+  top: -20%;
+  translate: -5% -20%;
+}
+
+.blob:nth-of-type(2) {
+  left: 100%;
+  top: 50%;
+  translate: -50% -50%;
+}
+
+.blob:nth-of-type(3) {
+  left: 30%;
+  top: 80%;
+  translate: -50% -50%;
+}
+
+.blob:nth-of-type(4) {
+  left: 30%;
+  bottom: 50%;
+  translate: -50% -50%;
+}
+
+.star:nth-of-type(1) {
+  position: absolute;
+  left: 65%;
+  top: 50%;
+  translate: -5% 50%;
+  /* rotate: 45deg; */
+  width: 100px;
+  animation: star-sea 15s ease-in-out infinite;
+}
+
+.star:nth-of-type(2) {
+  position: absolute;
+  left: 90%;
+  top: 50%;
+  translate: -50% 200px;
+  width: 20px;  
+  /* rotate: 12deg; */
+  animation: star-sea 15s ease-in-out infinite;
+}
+
+.star:nth-of-type(3) {
+  position: absolute;
+  left: 30%;
+  top: 0%;
+  translate: 10% 30%;
+  width: 20px;
+  /* rotate: 98deg; */
+  animation: star-sea 15s ease-in-out infinite;
+}
+
+.star:nth-of-type(4) {
+  position: absolute;
+  left: 40%;
+  bottom: 10%;
+  translate: 50% 410px;
+  width: 20px;
+  /* rotate: 34deg; */
+  animation: star-sea 15s ease-in-out infinite;
+}
+
+.star:nth-of-type(5) {
+  position: absolute;
+  left: 30%;
+  bottom: 40%;
+  translate: -50% 650px;
+  width: 20px;
+  /* rotate: 120deg; */
+  animation: star-sea 15s ease-in-out infinite;
+}
+
+@keyframes star-sea {
+  0% {
+    /* rotate: 0deg; */
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+
+@keyframes transform {
+
+  0%,
+  100% {
+    border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
+  }
+
+  14% {
+    border-radius: 40% 60% 54% 46% / 49% 60% 40% 51%;
+  }
+
+  28% {
+    border-radius: 54% 46% 38% 62% / 49% 70% 30% 51%;
+  }
+
+  42% {
+    border-radius: 61% 39% 55% 45% / 61% 38% 62% 39%;
+  }
+
+  56% {
+    border-radius: 61% 39% 67% 33% / 70% 50% 50% 30%;
+  }
+
+  70% {
+    border-radius: 50% 50% 34% 66% / 56% 68% 32% 44%;
+  }
+
+  84% {
+    border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%;
+  }
+}
+
+@keyframes rotate {
+  from {
+    rotate: 0deg;
+  }
+
+  to {
+    rotate: 360deg;
+  }
+}
+
+.handwriting {
+  font-family: 'Rock Salt', cursive;
+}
+
+.special-font {
+  font-family: 'Quattrocento', serif;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.8px);
+  -webkit-backdrop-filter: blur(3.8px);
+}
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: white; 
+  box-shadow: inset 0 0 5px grey;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 500px;
+  background: rgb(13, 11, 80); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(8, 6, 59); 
+}
+
+::-webkit-resizer {
+  background-color: transparent;
+}
